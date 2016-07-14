@@ -1,0 +1,9 @@
+E:\Github\EveMapBrowser\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+E:\Github\EveMapBrowser\Core\bin\Debug\systems.txt
+E:\Github\EveMapBrowser\Core\bin\Debug\Core.dll
+E:\Github\EveMapBrowser\Core\bin\Debug\Core.pdb
+E:\Github\EveMapBrowser\Core\bin\Debug\HtmlAgilityPack.dll
+E:\Github\EveMapBrowser\Core\bin\Debug\HtmlAgilityPack.pdb
+E:\Github\EveMapBrowser\Core\bin\Debug\HtmlAgilityPack.xml
+E:\Github\EveMapBrowser\Core\obj\Debug\Core.dll
+E:\Github\EveMapBrowser\Core\obj\Debug\Core.pdb

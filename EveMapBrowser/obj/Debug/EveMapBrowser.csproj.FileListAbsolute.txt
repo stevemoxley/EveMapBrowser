@@ -1,36 +1,15 @@
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveMapBrowser.exe.config
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\systems.txt
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveMapBrowser.exe
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveMapBrowser.pdb
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.csprojResolveAssemblyReference.cache
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.exe
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.pdb
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\Newtonsoft.Json.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\Newtonsoft.Json.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveAI.Core.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveAI.Live.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.Core.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.Element43.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveAuth.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveCentral.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveCrest.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveMarketData.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveWho.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveXml.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.StaticData.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.ZKillboard.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\Ionic.Zip.Reduced.dll
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.Core.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.Element43.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveAuth.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveCentral.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveCrest.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveMarketData.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveWho.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.EveXml.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.StaticData.xml
-c:\users\steve\documents\visual studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\EveLib.ZKillboard.xml
-C:\Users\Steve\Documents\Visual Studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\HtmlAgilityPack.dll
-C:\Users\Steve\Documents\Visual Studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\HtmlAgilityPack.pdb
-C:\Users\Steve\Documents\Visual Studio 2015\Projects\EveMapBrowser\EveMapBrowser\bin\Debug\HtmlAgilityPack.xml
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\EveMapBrowser.exe.config
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\systems.txt
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\EveMapBrowser.exe
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\EveMapBrowser.pdb
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\Core.dll
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\HtmlAgilityPack.dll
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\Core.pdb
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\HtmlAgilityPack.pdb
+E:\Github\EveMapBrowser\EveMapBrowser\bin\Debug\HtmlAgilityPack.xml
+E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.csprojResolveAssemblyReference.cache
+E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.Main.resources
+E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.Properties.Resources.resources
+E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.csproj.GenerateResource.Cache
+E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.exe
+E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.pdb
