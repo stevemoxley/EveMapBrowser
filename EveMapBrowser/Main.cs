@@ -34,13 +34,17 @@ namespace EveMapBrowser
 
             lstMessages.Items.Add("Done getting all data");
 
+            List<EveSystem> results = new List<EveSystem>();
+
             foreach (var system in systems)
             {
                 if (PassesTest(system))
                 {
-                    lstResults.Items.Add(system);
+                    results.Add(system);
                 }
             }
+
+            LoadDataGridView(results);
 
         }
 
@@ -53,5 +57,38 @@ namespace EveMapBrowser
 
             return false;
         }
+
+        private void LoadDataGridView(List<EveSystem> eveSystems)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Security Status");
+            dt.Columns.Add("Belts");
+            dt.Columns.Add("1 Hr Jumps");
+            dt.Columns.Add("24 Hr Jumps");
+            dt.Columns.Add("Faction");
+
+            dt.Columns[0].DataType = typeof(string);
+            dt.Columns[1].DataType = typeof(decimal);
+            dt.Columns[2].DataType = typeof(int);
+            dt.Columns[3].DataType = typeof(int);
+            dt.Columns[4].DataType = typeof(int);
+            dt.Columns[5].DataType = typeof(string);
+
+            foreach (var system in eveSystems)
+            {
+                var row = dt.NewRow();
+                row[0] = system.Name;
+                row[1] = system.SecurityStatus;
+                row[2] = system.NumberOfBelts;
+                row[3] = system.Jumps1Hour;
+                row[4] = system.Jumps24Hours;
+                row[5] = system.Faction;
+                dt.Rows.Add(row);
+            }
+
+            dgvResults.DataSource = dt;
+        }
+
     }
 }

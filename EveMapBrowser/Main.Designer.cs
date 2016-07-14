@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.btnLoad = new System.Windows.Forms.Button();
-            this.lstResults = new System.Windows.Forms.ListBox();
             this.lstMessages = new System.Windows.Forms.ListBox();
+            this.dgvResults = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLoad
@@ -43,15 +44,6 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // lstResults
-            // 
-            this.lstResults.FormattingEnabled = true;
-            this.lstResults.Location = new System.Drawing.Point(13, 13);
-            this.lstResults.Name = "lstResults";
-            this.lstResults.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lstResults.Size = new System.Drawing.Size(371, 173);
-            this.lstResults.TabIndex = 1;
-            // 
             // lstMessages
             // 
             this.lstMessages.FormattingEnabled = true;
@@ -60,16 +52,25 @@
             this.lstMessages.Size = new System.Drawing.Size(285, 134);
             this.lstMessages.TabIndex = 2;
             // 
+            // dgvResults
+            // 
+            this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResults.Location = new System.Drawing.Point(13, 13);
+            this.dgvResults.Name = "dgvResults";
+            this.dgvResults.Size = new System.Drawing.Size(371, 193);
+            this.dgvResults.TabIndex = 3;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 353);
+            this.Controls.Add(this.dgvResults);
             this.Controls.Add(this.lstMessages);
-            this.Controls.Add(this.lstResults);
             this.Controls.Add(this.btnLoad);
             this.Name = "Main";
             this.Text = "Eve Map Browser";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -77,8 +78,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.ListBox lstResults;
         private System.Windows.Forms.ListBox lstMessages;
+        private System.Windows.Forms.DataGridView dgvResults;
     }
 }
 
