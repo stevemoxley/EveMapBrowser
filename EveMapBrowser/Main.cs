@@ -27,7 +27,8 @@ namespace EveMapBrowser
 
         private void btnPvp_Click(object sender, EventArgs e)
         {
-
+            PvpReport pvpreport = new PvpReport(_mapDataGridViewPopulatorEngine.FilteredSystems);
+            pvpreport.Show();
         }
 
         private void btnClearFilters_Click(object sender, EventArgs e)
