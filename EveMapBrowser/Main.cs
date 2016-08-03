@@ -20,86 +20,61 @@ namespace EveMapBrowser
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            var systems = EveSystemProvider.GetSystemsFromFile();
-
-            var taskList = new List<Task>();
-
-            foreach (var system in systems)
-            {
-                lstMessages.Items.Add(string.Format("Checking {0}", system.Name));
-                taskList.Add(Task.Factory.StartNew(() => DotlanDataProvider.GetSystemData(system)));
-            }
-
-            Task.WaitAll(taskList.ToArray());
-
-            lstMessages.Items.Add("Done getting all data");
-
-            List<EveSystem> results = new List<EveSystem>();
-
-            foreach (var system in systems)
-            {
-                if (PassesTest(system))
-                {
-                    results.Add(system);
-                }
-            }
-
-            LoadDataGridView(results);
-
-            _results = results;
-
+            _mapDataGridViewPopulatorEngine = new MapDataGridViewPopulatorEngine(dgvResults);
+            _mapDataGridViewPopulatorEngine.LoadDataGridView();
             btnPvp.Enabled = true;
-
         }
-
-        private bool PassesTest(EveSystem system)
-        {
-            if(system.SecurityStatus < 0 && system.NumberOfBelts > 9)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        private void LoadDataGridView(List<EveSystem> eveSystems)
-        {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Security Status");
-            dt.Columns.Add("Belts");
-            dt.Columns.Add("1 Hr Jumps");
-            dt.Columns.Add("24 Hr Jumps");
-            dt.Columns.Add("Faction");
-
-            dt.Columns[0].DataType = typeof(string);
-            dt.Columns[1].DataType = typeof(decimal);
-            dt.Columns[2].DataType = typeof(int);
-            dt.Columns[3].DataType = typeof(int);
-            dt.Columns[4].DataType = typeof(int);
-            dt.Columns[5].DataType = typeof(string);
-
-            foreach (var system in eveSystems)
-            {
-                var row = dt.NewRow();
-                row[0] = system.Name;
-                row[1] = system.SecurityStatus;
-                row[2] = system.NumberOfBelts;
-                row[3] = system.Jumps1Hour;
-                row[4] = system.Jumps24Hours;
-                row[5] = system.Faction;
-                dt.Rows.Add(row);
-            }
-
-            dgvResults.DataSource = dt;
-        }
-
-        private List<EveSystem> _results;
 
         private void btnPvp_Click(object sender, EventArgs e)
         {
-            PvpReport pvpreport = new PvpReport(_results);
-            pvpreport.Show();
+
         }
+
+        private void btnClearFilters_Click(object sender, EventArgs e)
+        {
+            txtMaxSec.Clear();
+            txtMinSec.Clear();
+
+            _mapDataGridViewPopulatorEngine.ClearFilter();
+            _mapDataGridViewPopulatorEngine.LoadDataGridView();
+        }
+
+        private void btnApplyFilters_Click(object sender, EventArgs e)
+        {
+            decimal? minSec = null;
+            decimal? maxSec = null;
+
+            if(!string.IsNullOrEmpty(txtMinSec.Text))
+            {
+                decimal minSecTemp = 0;
+                if(!decimal.TryParse(txtMinSec.Text, out minSecTemp))
+                {
+                    MessageBox.Show("Please enter a valid value for min sec");
+                }
+                else
+                {
+                    minSec = minSecTemp;
+                }
+            }
+            if (!string.IsNullOrEmpty(txtMaxSec.Text))
+            {
+                decimal maxSecTemp = 0;
+                if (!decimal.TryParse(txtMaxSec.Text, out maxSecTemp))
+                {
+                    MessageBox.Show("Please enter a valid value for max sec");
+                }
+                else
+                {
+                    maxSec = maxSecTemp;
+                }
+            }
+
+            _mapDataGridViewPopulatorEngine.FilterSystems(minSec, maxSec);
+            _mapDataGridViewPopulatorEngine.LoadDataGridView();
+        }
+
+        private MapDataGridViewPopulatorEngine _mapDataGridViewPopulatorEngine;
+
+   
     }
 }
