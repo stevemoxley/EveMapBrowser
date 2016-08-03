@@ -13,3 +13,4 @@ E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.Properties.Resourc
 E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.csproj.GenerateResource.Cache
 E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.exe
 E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.pdb
+E:\Github\EveMapBrowser\EveMapBrowser\obj\Debug\EveMapBrowser.PvpReport.resources

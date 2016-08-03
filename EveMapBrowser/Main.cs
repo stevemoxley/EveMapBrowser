@@ -46,11 +46,15 @@ namespace EveMapBrowser
 
             LoadDataGridView(results);
 
+            _results = results;
+
+            btnPvp.Enabled = true;
+
         }
 
         private bool PassesTest(EveSystem system)
         {
-            if(system.SecurityStatus > 0.8M && system.NumberOfBelts > 9)
+            if(system.SecurityStatus < 0 && system.NumberOfBelts > 9)
             {
                 return true;
             }
@@ -90,5 +94,12 @@ namespace EveMapBrowser
             dgvResults.DataSource = dt;
         }
 
+        private List<EveSystem> _results;
+
+        private void btnPvp_Click(object sender, EventArgs e)
+        {
+            PvpReport pvpreport = new PvpReport(_results);
+            pvpreport.Show();
+        }
     }
 }

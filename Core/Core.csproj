@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CacheEngine.cs" />
     <Compile Include="DotlanDataProvider.cs" />
+    <Compile Include="DotlanHTMLProvider.cs" />
     <Compile Include="EveSystem.cs" />
     <Compile Include="EveSystemProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

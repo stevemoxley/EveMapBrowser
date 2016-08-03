@@ -16,11 +16,21 @@ namespace Core
 
         public int Jumps24Hours { get; set; }
 
+        public int ShipsKilled1Hour { get; set; }
+
+        public int ShipsKilled24Hours { get; set; }
+
+        public int PodsKilled1Hour { get; set; }
+
+        public int PodsKilled24Hours { get; set; }
+
         public decimal SecurityStatus { get; set; }
 
         public int NumberOfBelts { get; set; }
 
         public string Faction { get; set; }
+
+        public string Region { get; set; }
 
         public override string ToString()
         {
