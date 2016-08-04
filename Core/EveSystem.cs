@@ -32,6 +32,10 @@ namespace Core
 
         public string Region { get; set; }
 
+        public int RatsKilled1Hour { get; set; }
+
+        public int RatsKilled24Hours { get; set; }
+
         public override string ToString()
         {
             return string.Format("{0} ({1}) - {2} Belts | {3} | {4}/{5}", Name, SecurityStatus, NumberOfBelts, Faction, Jumps1Hour, Jumps24Hours);

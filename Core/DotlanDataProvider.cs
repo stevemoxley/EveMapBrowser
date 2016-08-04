@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
+using System.Web;
+using System.Net;
 
 namespace Core
 {
     public static class DotlanDataProvider
     {
+
         public static void GetSystemData(EveSystem eveSystem)
         {
             try
@@ -48,6 +51,9 @@ namespace Core
                 eveSystem.PodsKilled1Hour = int.Parse(secParts[6]);
                 eveSystem.PodsKilled24Hours = int.Parse(secParts[7]);
 
+                eveSystem.RatsKilled1Hour = int.Parse(beltsParts[6]);
+                eveSystem.RatsKilled24Hours = int.Parse(beltsParts[7]);
+
                 eveSystem.Region = shipsKilledParts[2].Trim();
 
                 string beltsString = beltsParts[4];
@@ -57,7 +63,7 @@ namespace Core
 
                 eveSystem.SecurityStatus = decimal.Parse(secParts[2]);
 
-                eveSystem.Faction = factionParts[2].Trim();
+                eveSystem.Faction = WebUtility.HtmlDecode(factionParts[2].Trim());
             }
             catch (Exception ex)
             {

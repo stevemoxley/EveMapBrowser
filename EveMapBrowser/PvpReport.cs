@@ -25,6 +25,7 @@ namespace EveMapBrowser
         private void PvpReport_Load(object sender, EventArgs e)
         {
             LoadViolentRegions();
+            LoadRattingSystems();
         }
 
         private void LoadViolentRegions()
@@ -51,6 +52,21 @@ namespace EveMapBrowser
 
             lstViolentRegions.Items.AddRange(infoStrings);
 
+        }
+
+        private void LoadRattingSystems()
+        {
+            var rattingOrder = _eveSystems.OrderByDescending(s => s.RatsKilled24Hours).ToArray();
+
+            string[] infoStrings = new string[rattingOrder.Length];
+
+            for (int i = 0; i < rattingOrder.Length; i++)
+            {
+                var system = rattingOrder[i];
+                infoStrings[i] = string.Format("{0}/{1} ({2}) - {3}", system.Name, system.Region, system.Faction, system.RatsKilled24Hours);
+            }
+
+            lstRattingSystems.Items.AddRange(infoStrings);
         }
 
         private List<EveSystem> _eveSystems;
